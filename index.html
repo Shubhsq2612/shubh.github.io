@@ -16,7 +16,7 @@
         function invokeCSCode(data) {
             try {
                 log("Sending Data:" + data);
-                jsBridge.invokeAction(data);
+                invokeCSharpAction(data)
             }
             catch (err) {
                 log(err);
