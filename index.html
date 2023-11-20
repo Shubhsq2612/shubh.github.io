@@ -1,18 +1,9 @@
-<html>
-<body>
-<h1>HybridWebView Test</h1>
-<br />
-    Enter name5555: <input type="text" id="name">
-<br />
-<br />
-<button type="button" onclick="javascript: invokeCSCode($('#name').val());">Invoke C# Code</button>
-<br />
-<p id="result">Result1:</p>
-<script type="text/javascript">function log(str) {
-            $('#result').text($('#result').text() + " " + str);
-        }
- 
-        function invokeCSCode(data) {
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+		function invokeCSCode(data) {
             try {
                 log("Sending Data:" + data);
                 window.jsBridge.invokeAction(data)
@@ -20,6 +11,14 @@
             catch (err) {
                 log(err);
             }
-        }</script>
+        }
+	</script>
+</head>
+<body>
+    <div>
+        Welcome to Xamarin.Forms!
+        <p>
+        <input type="button" value="EVAL C#" onclick="invokeCSCode();" />
+    </div>
 </body>
 </html>
