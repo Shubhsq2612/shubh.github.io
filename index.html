@@ -6,11 +6,15 @@
     Enter name22222: <input type="text" id="name">
 <br />
 <br />
-<button type="button" onclick="javascript: invokeCSCode($('#name').val());">Invoke C# Code</button>
+<button type="button" onclick="javascript: handleButtonTap();">Invoke C# Code</button>
 <br />
 <p id="result">Result:</p>
 <script type="text/javascript">
- 
+
+    function handleButtonTap() {
+            invokeCSCode("Button tapped!");
+        }
+    
         function invokeCSCode(data) {
             try {
                 window.jsBridge.invokeAction(data);
