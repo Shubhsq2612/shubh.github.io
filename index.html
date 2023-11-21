@@ -7,7 +7,7 @@
     <script>
         // JavaScript function to send a message to C#
         function sendMessageToCSharp(message) {
-            window.CSharpInterop.handleMessageFromJavaScript(message);
+            window.external.notify(message);
         }
 
         // JavaScript function to handle button tap
@@ -17,7 +17,7 @@
     </script>
 </head>
 <body>
-    <h1>Hello from HTML!</h1>
+    <h1>Hello from HTML!     222222</h1>
     <button onclick="handleButtonTap()">Tap me!</button>
 </body>
 </html>
